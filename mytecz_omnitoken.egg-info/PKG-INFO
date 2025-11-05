@@ -1,6 +1,6 @@
 Metadata-Version: 2.4
 Name: mytecz-omnitoken
-Version: 0.1.0
+Version: 0.1.3
 Summary: Universal tokenizer with modular architecture supporting multiple tokenization strategies
 Author-email: Kalyana Krishna Kondapalli <kalyanakondapalli@gmail.com>
 License-Expression: MIT
