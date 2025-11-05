@@ -7,7 +7,7 @@ name = "mytecz-omnitoken"
 version = "0.1.0"
 description = "Universal tokenizer with modular architecture supporting multiple tokenization strategies"
 readme = "README.md"
-license = {file = "LICENSE"}
+license = {text = "MIT"}
 authors = [
     {name = "Kalyana Krishna Kondapalli", email = "kalyanakondapalli@gmail.com"}
 ]
@@ -78,11 +78,11 @@ all = [
 ]
 
 [project.urls]
-Homepage = "https://github.com/mytecz/omnitoken"
-Documentation = "https://mytecz-omnitoken.readthedocs.io/"
-Repository = "https://github.com/mytecz/omnitoken.git"
-"Bug Tracker" = "https://github.com/mytecz/omnitoken/issues"
-Changelog = "https://github.com/mytecz/omnitoken/blob/main/CHANGELOG.md"
+Homepage = "https://github.com/kalyanakkondapalli/mytecz_omnitoken"
+Documentation = "https://github.com/kalyanakkondapalli/mytecz_omnitoken#readme"
+Repository = "https://github.com/kalyanakkondapalli/mytecz_omnitoken.git"
+"Bug Tracker" = "https://github.com/kalyanakkondapalli/mytecz_omnitoken/issues"
+"Source Code" = "https://github.com/kalyanakkondapalli/mytecz_omnitoken"
 
 [project.scripts]
 omnitoken = "omnitoken.cli:main"

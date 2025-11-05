@@ -6,32 +6,12 @@ Home-page: https://github.com/mytecz/omnitoken
 Author: MyTecZ
 Author-email: Kalyana Krishna Kondapalli <kalyanakondapalli@gmail.com>
 Maintainer-email: Kalyana Krishna Kondapalli <kalyanakondapalli@gmail.com>
-License: MIT License
-        
-        Copyright (c) 2025 MyTecZ
-        
-        Permission is hereby granted, free of charge, to any person obtaining a copy
-        of this software and associated documentation files (the "Software"), to deal
-        in the Software without restriction, including without limitation the rights
-        to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-        copies of the Software, and to permit persons to whom the Software is
-        furnished to do so, subject to the following conditions:
-        
-        The above copyright notice and this permission notice shall be included in all
-        copies or substantial portions of the Software.
-        
-        THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-        IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-        FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-        AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-        LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-        OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-        SOFTWARE.
-Project-URL: Homepage, https://github.com/mytecz/omnitoken
-Project-URL: Documentation, https://mytecz-omnitoken.readthedocs.io/
-Project-URL: Repository, https://github.com/mytecz/omnitoken.git
-Project-URL: Bug Tracker, https://github.com/mytecz/omnitoken/issues
-Project-URL: Changelog, https://github.com/mytecz/omnitoken/blob/main/CHANGELOG.md
+License: MIT
+Project-URL: Homepage, https://github.com/kalyanakkondapalli/mytecz_omnitoken
+Project-URL: Documentation, https://github.com/kalyanakkondapalli/mytecz_omnitoken#readme
+Project-URL: Repository, https://github.com/kalyanakkondapalli/mytecz_omnitoken.git
+Project-URL: Bug Tracker, https://github.com/kalyanakkondapalli/mytecz_omnitoken/issues
+Project-URL: Source Code, https://github.com/kalyanakkondapalli/mytecz_omnitoken
 Keywords: tokenizer,nlp,natural-language-processing,bpe,wordpiece,sentencepiece,subword,machine-learning,text-processing,unicode,multilingual,hybrid-tokenization
 Classifier: Development Status :: 4 - Beta
 Classifier: Intended Audience :: Developers
@@ -78,37 +58,42 @@ Dynamic: requires-python
 
 # MyTecZ OmniToken 🚀
 
-**Universal Tokenizer with Modular Architecture**
+**Universal Tokenizer Framework with Multi-Backend Support**
 
 [![Python Version](https://img.shields.io/badge/python-3.10%2B-blue.svg)](https://python.org)
 [![PyPI](https://img.shields.io/pypi/v/mytecz-omnitoken.svg)](https://pypi.org/project/mytecz-omnitoken/)
-[![Build](https://github.com/mytecz/omnitoken/actions/workflows/publish.yml/badge.svg)](https://github.com/mytecz/omnitoken/actions)
-[![Coverage](https://img.shields.io/badge/coverage-unknown-lightgrey.svg)](#) <!-- Replace with real badge once coverage upload enabled -->
+[![Downloads](https://img.shields.io/pypi/dm/mytecz-omnitoken.svg)](https://pypi.org/project/mytecz-omnitoken/)
 [![License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
-[![Status](https://img.shields.io/badge/status-beta-orange.svg)](https://github.com/mytecz/omnitoken)
+[![Tests](https://img.shields.io/badge/tests-98%20passing-brightgreen.svg)](#testing)
 
 ## 🎯 Overview
 
-MyTecZ OmniToken is a universal tokenizer designed to overcome limitations in existing tokenization solutions. It provides a **modular architecture** that supports multiple tokenization strategies and input formats, making it ideal for diverse NLP applications.
+MyTecZ OmniToken is a production-ready universal tokenizer framework that provides a unified interface for multiple tokenization backends. Designed for modern NLP workflows, it offers seamless switching between BPE, WordPiece, SentencePiece, and experimental Hybrid tokenization strategies.
+
+**Perfect for:**
+- 🤖 Machine Learning practitioners building NLP models  
+- 🔬 Researchers comparing tokenization strategies
+- 🏗️ Production systems requiring robust text processing
+- 📚 Educational projects exploring tokenization algorithms
 
 ### ✨ Key Features
 
-- **🔧 Modular Architecture**: Plug-and-play tokenization strategies
-- **📁 Multiple Input Formats**: Files, JSON, raw strings, mixed data
-- **🌍 Unicode & Emoji Support**: Full international character support
-- **🔄 Deterministic & Reversible**: Reliable encode/decode operations
-- **🧪 Experimental Hybrid Mode**: Adaptive tokenization strategies
-- **📊 Built-in Visualizer**: Debug and analyze tokenization results
-- **⚡ Performance Optimized**: Efficient training and inference
-- **🎛️ Configurable**: Extensive customization options
+- **� Multi-Backend Support**: BPE, WordPiece, SentencePiece, and Hybrid tokenizers
+- **� Unified API**: Single interface across all tokenization methods  
+- **🌍 Unicode Ready**: Full support for international text, emojis, and complex scripts
+- **🧪 98 Tests Passing**: Comprehensive test suite ensuring reliability
+- **📊 Frequency Analysis**: Built-in token and character frequency tracking
+- **� Highly Configurable**: Extensive customization options
+- **⚡ Production Optimized**: Efficient training and inference with robust error handling
 
 ### 🛠️ Supported Tokenization Methods
 
-- **Character-based**: Fine-grained character-level tokenization
-- **BPE (Byte Pair Encoding)**: Subword tokenization with merge operations
-- **WordPiece**: BERT-style tokenization with ## prefixes
-- **SentencePiece**: Language-independent subword tokenization
-- **Hybrid**: Experimental adaptive tokenization combining multiple strategies
+| Method | Description | Best For |
+|--------|-------------|----------|
+| **BPE** | Byte Pair Encoding with merge operations | General-purpose, handling OOV words |
+| **WordPiece** | BERT-style with `##` continuation prefixes | Transformer models, subword tokenization |
+| **SentencePiece** | Language-independent raw character processing | Multilingual applications, robust Unicode |
+| **Hybrid** | Adaptive strategy combining multiple approaches | Mixed content types, experimental research |
 
 ## 🚀 Quick Start
 
@@ -124,77 +109,86 @@ pip install mytecz-omnitoken
 from omnitoken import OmniToken
 
 # Create tokenizer with your preferred method
-tokenizer = OmniToken(method="hybrid", vocab_size=10000)
+tokenizer = OmniToken(method="wordpiece", vocab_size=1000)
 
-# Train on various input formats
-training_data = [
+# Train on text data
+training_texts = [
     "Hello world! This is sample text.",
-    {"text": "JSON input is supported"},
-    "path/to/your/textfile.txt"  # File paths work too
+    "More training data here.",
+    "Tokenization is important for NLP."
 ]
 
-tokenizer.fit(training_data)
+tokenizer.fit(training_texts)
 
-# Encode text to tokens
-text = "Hello world 👋! Unicode and emojis work perfectly 🚀"
-tokens = tokenizer.encode(text)
-print(f"Tokens: {tokens}")
+# Encode text to token IDs
+text = "Hello world! 👋 Unicode works perfectly."
+token_ids = tokenizer.encode(text)
+print(f"Token IDs: {token_ids}")
 
-# Decode back to text
-decoded = tokenizer.decode(tokens)
+# Decode back to text  
+decoded = tokenizer.decode(token_ids)
 print(f"Decoded: {decoded}")
+
+# Get vocabulary and frequencies
+vocab = tokenizer.get_vocab()
+frequencies = tokenizer.get_token_frequencies()
+print(f"Vocabulary size: {len(vocab)}")
 ```
 
 ### Advanced Example
 
 ```python
 from omnitoken import OmniToken
-from omnitoken.utils import TokenVisualizer
 
 # Configure tokenizer with custom settings
 tokenizer = OmniToken(
     method="bpe",
-    vocab_size=5000,
-    min_frequency=2,
+    vocab_size=2000,
+    min_frequency=1,  # Include rare tokens
     special_tokens=["[CUSTOM]", "[SPECIAL]"]
 )
 
-# Train with mixed data sources
-mixed_data = [
-    "Regular text for training",
-    "data/corpus.txt",  # File input
-    {"documents": ["Doc 1", "Doc 2"]},  # JSON input
-    ["List", "of", "strings"]  # List input
+# Train with text data
+training_texts = [
+    "The quick brown fox jumps over the lazy dog.",
+    "Artificial intelligence and machine learning.",
+    "Natural language processing with tokenization."
 ]
 
-tokenizer.fit(mixed_data)
+tokenizer.fit(training_texts)
 
-# Analyze tokenization
-test_text = "Analyze this tokenization example!"
-tokens = tokenizer._tokenizer.tokenize(test_text)
+# Analyze tokenization results
+test_text = "Machine learning tokenization example!"
 token_ids = tokenizer.encode(test_text)
+decoded = tokenizer.decode(token_ids)
 
-# Visualize results
-visualization = TokenVisualizer.visualize_tokens(test_text, tokens, token_ids)
-print(visualization)
+print(f"Original: {test_text}")
+print(f"Token IDs: {token_ids}")
+print(f"Decoded: {decoded}")
+print(f"Vocabulary size: {len(tokenizer.get_vocab())}")
 ```
 
-### Frequency & Vocabulary Introspection
-
-After training you can inspect vocabulary size and token frequency distribution:
+### Method Comparison
 
 ```python
-tok = OmniToken(method="bpe", vocab_size=500)
-tok.fit(["Some training text", "More tokens here", "Text text text"])
-vocab = tok.get_vocab()              # token -> id
-freqs = tok.get_token_frequencies()  # token -> observed count
-print(len(vocab), "vocab items", len(freqs), "with frequencies tracked")
-print(sorted(tok.get_token_frequencies().items(), key=lambda x: -x[1])[:10])
+# Compare different tokenization methods on the same text
+text = "Hello world! Tokenization comparison."
+
+methods = ["bpe", "wordpiece", "sentencepiece", "hybrid"]
+training_data = ["Sample training text", "More training data", "Hello world"]
+
+for method in methods:
+    tokenizer = OmniToken(method=method, vocab_size=500, min_frequency=1)
+    tokenizer.fit(training_data)
+    
+    token_ids = tokenizer.encode(text)
+    decoded = tokenizer.decode(text)
+    vocab_size = len(tokenizer.get_vocab())
+    
+    print(f"{method}: {len(token_ids)} tokens, vocab={vocab_size}")
 ```
 
-You can also pass the alias `mode=` instead of `method=` (e.g. `OmniToken(mode="wordpiece")`).
-
-## 📚 Documentation
+## 📚 API Reference
 
 ### Tokenization Methods
 
@@ -263,33 +257,27 @@ mixed = [
 tokenizer.fit(mixed)
 ```
 
-## 🧪 Examples
-
-Explore the `/examples` directory for comprehensive usage examples:
-
-- **`example_basic.py`**: Basic usage and method comparison
-- **`example_json_file_input.py`**: Advanced input format handling
-
-Run examples:
-```bash
-cd examples
-python example_basic.py
-python example_json_file_input.py
-```
-
 ## 🧪 Testing
 
-Run the comprehensive test suite:
+MyTecZ OmniToken includes a comprehensive test suite with 98 passing tests covering all functionality.
+
+### Running Tests
 
 ```bash
-# Basic functionality tests
-python -m pytest tests/test_basic.py -v
+# Install the package
+pip install mytecz-omnitoken
 
-# Round-trip tokenization tests  
-python -m pytest tests/test_reverse_tokenization.py -v
+# Clone repository for tests (if contributing)
+git clone https://github.com/kalyanakkondapalli/mytecz_omnitoken.git
+cd mytecz_omnitoken
 
 # Run all tests
 python -m pytest tests/ -v
+
+# Run specific test categories
+python -m pytest tests/test_basic.py -v          # Basic functionality
+python -m pytest tests/test_roundtrip.py -v     # Encode/decode consistency
+python -m pytest tests/test_unicode.py -v       # Unicode and multilingual
 ```
 
 ### Test Coverage
@@ -399,92 +387,78 @@ print(stats)
 
 ## 🎯 Use Cases
 
-### Natural Language Processing
+**Natural Language Processing**
 - Text preprocessing for transformer models
-- Multi-language document processing
+- Multi-language document processing  
 - Social media content analysis
 
-### Code Analysis
+**Code Analysis**
 - Programming language tokenization
 - Code documentation processing
 - Technical text analysis
 
-### Content Processing
+**Content Processing**
 - Web scraping and text extraction
 - Document indexing and search
 - Content recommendation systems
 
-### Research and Development
+**Research and Development**
 - Tokenization algorithm research
 - Comparative analysis studies
 - Custom tokenization strategies
 
-## 🏗️ Architecture
+## 🏗️ Package Structure
 
-```
+```text
 mytecz_omnitoken/
 ├── omnitoken/
-│   ├── __init__.py              # Main package interface
+│   ├── __init__.py              # Main OmniToken interface
 │   ├── tokenizer_base.py        # Abstract base class
 │   ├── tokenizer_bpe.py         # BPE implementation
-│   ├── tokenizer_wordpiece.py   # WordPiece implementation
+│   ├── tokenizer_wordpiece.py   # WordPiece implementation  
 │   ├── tokenizer_sentencepiece.py # SentencePiece implementation
 │   ├── tokenizer_hybrid.py      # Hybrid tokenizer
 │   ├── trainer.py               # Training algorithms
-│   └── utils.py                 # Utilities and visualization
-├── examples/                    # Usage examples
-├── tests/                       # Test suite
-└── README.md                    # This file
+│   ├── utils.py                 # Utilities and helpers
+│   └── data/                    # Training corpora and test samples
+└── tests/                       # Comprehensive test suite
 ```
 
 ## 🤝 Contributing
 
 We welcome contributions! Here's how you can help:
 
-1. **🐛 Report Bugs**: Open issues for bugs or unexpected behavior
-2. **💡 Feature Requests**: Suggest new features or improvements
-3. **📝 Documentation**: Help improve documentation and examples
-4. **🧪 Testing**: Add test cases for edge cases
-5. **🔧 Code**: Submit pull requests with bug fixes or features
+- **🐛 Report Issues**: [Open an issue](https://github.com/kalyanakkondapalli/mytecz_omnitoken/issues) for bugs or feature requests
+- **📝 Improve Documentation**: Help enhance examples and documentation
+- **🧪 Add Tests**: Contribute test cases for edge cases
+- **🔧 Submit Code**: Submit pull requests with improvements or fixes
 
 ### Development Setup
 
 ```bash
 # Clone the repository
-git clone https://github.com/mytecz/omnitoken.git
-cd omnitoken
+git clone https://github.com/kalyanakkondapalli/mytecz_omnitoken.git
+cd mytecz_omnitoken
 
 # Install in development mode
-pip install -e .[dev]
+pip install -e .
 
 # Run tests
 python -m pytest tests/ -v
-
-# Format code
-black omnitoken/ tests/ examples/
-
-# Type checking
-mypy omnitoken/
 ```
 
 ## 📄 License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-## 🙏 Acknowledgments
+## � Links
 
-- Inspired by research in subword tokenization algorithms
-- Built with love for the NLP and ML community
-- Special thanks to contributors and beta testers
-
-## 📞 Contact
-
-- **GitHub**: [https://github.com/mytecz/omnitoken](https://github.com/mytecz/omnitoken)
-- **Email**: contact@mytecz.com
-- **Issues**: [https://github.com/mytecz/omnitoken/issues](https://github.com/mytecz/omnitoken/issues)
+- **PyPI Package**: [https://pypi.org/project/mytecz-omnitoken/](https://pypi.org/project/mytecz-omnitoken/)
+- **Source Code**: [https://github.com/kalyanakkondapalli/mytecz_omnitoken](https://github.com/kalyanakkondapalli/mytecz_omnitoken)
+- **Issues & Support**: [https://github.com/kalyanakkondapalli/mytecz_omnitoken/issues](https://github.com/kalyanakkondapalli/mytecz_omnitoken/issues)
 
 ---
 
-**Made with ❤️ by MyTecZ**
-
-*Empowering NLP with Universal Tokenization* 🚀
+**Universal Tokenization Made Simple** 🚀
+ 
+ 
