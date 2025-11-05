@@ -1,12 +1,10 @@
 LICENSE
 README.md
 pyproject.toml
-setup.py
 mytecz_omnitoken.egg-info/PKG-INFO
 mytecz_omnitoken.egg-info/SOURCES.txt
 mytecz_omnitoken.egg-info/dependency_links.txt
 mytecz_omnitoken.egg-info/entry_points.txt
-mytecz_omnitoken.egg-info/not-zip-safe
 mytecz_omnitoken.egg-info/requires.txt
 mytecz_omnitoken.egg-info/top_level.txt
 omnitoken/__init__.py

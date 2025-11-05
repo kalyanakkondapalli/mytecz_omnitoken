@@ -2,11 +2,9 @@ Metadata-Version: 2.4
 Name: mytecz-omnitoken
 Version: 0.1.0
 Summary: Universal tokenizer with modular architecture supporting multiple tokenization strategies
-Home-page: https://github.com/mytecz/omnitoken
-Author: MyTecZ
 Author-email: Kalyana Krishna Kondapalli <kalyanakondapalli@gmail.com>
 Maintainer-email: Kalyana Krishna Kondapalli <kalyanakondapalli@gmail.com>
-License: MIT
+License-Expression: MIT
 Project-URL: Homepage, https://github.com/kalyanakkondapalli/mytecz_omnitoken
 Project-URL: Documentation, https://github.com/kalyanakkondapalli/mytecz_omnitoken#readme
 Project-URL: Repository, https://github.com/kalyanakkondapalli/mytecz_omnitoken.git
@@ -16,7 +14,6 @@ Keywords: tokenizer,nlp,natural-language-processing,bpe,wordpiece,sentencepiece,
 Classifier: Development Status :: 4 - Beta
 Classifier: Intended Audience :: Developers
 Classifier: Intended Audience :: Science/Research
-Classifier: License :: OSI Approved :: MIT License
 Classifier: Operating System :: OS Independent
 Classifier: Programming Language :: Python :: 3
 Classifier: Programming Language :: Python :: 3.10
@@ -27,7 +24,7 @@ Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
 Classifier: Topic :: Software Development :: Libraries :: Python Modules
 Classifier: Topic :: Text Processing :: Linguistic
 Classifier: Typing :: Typed
-Requires-Python: >=3.8
+Requires-Python: >=3.10
 Description-Content-Type: text/markdown
 License-File: LICENSE
 Provides-Extra: dev
@@ -51,10 +48,7 @@ Requires-Dist: numpy>=1.24; extra == "performance"
 Requires-Dist: cython>=3.0; extra == "performance"
 Provides-Extra: all
 Requires-Dist: mytecz-omnitoken[dev,examples,performance,test]; extra == "all"
-Dynamic: author
-Dynamic: home-page
 Dynamic: license-file
-Dynamic: requires-python
 
 # MyTecZ OmniToken 🚀
 
