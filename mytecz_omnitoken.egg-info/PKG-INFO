@@ -3,33 +3,15 @@ Name: mytecz-omnitoken
 Version: 0.1.0
 Summary: Universal tokenizer with modular architecture supporting multiple tokenization strategies
 Author-email: Kalyana Krishna Kondapalli <kalyanakondapalli@gmail.com>
-Maintainer-email: Kalyana Krishna Kondapalli <kalyanakondapalli@gmail.com>
 License-Expression: MIT
 Project-URL: Homepage, https://github.com/kalyanakkondapalli/mytecz_omnitoken
-Project-URL: Documentation, https://github.com/kalyanakkondapalli/mytecz_omnitoken#readme
 Project-URL: Repository, https://github.com/kalyanakkondapalli/mytecz_omnitoken.git
 Project-URL: Bug Tracker, https://github.com/kalyanakkondapalli/mytecz_omnitoken/issues
-Project-URL: Source Code, https://github.com/kalyanakkondapalli/mytecz_omnitoken
-Keywords: tokenizer,nlp,natural-language-processing,bpe,wordpiece,sentencepiece,subword,machine-learning,text-processing,unicode,multilingual,hybrid-tokenization
-Classifier: Development Status :: 4 - Beta
-Classifier: Intended Audience :: Developers
-Classifier: Intended Audience :: Science/Research
-Classifier: Operating System :: OS Independent
-Classifier: Programming Language :: Python :: 3
-Classifier: Programming Language :: Python :: 3.10
-Classifier: Programming Language :: Python :: 3.11
-Classifier: Programming Language :: Python :: 3.12
-Classifier: Programming Language :: Python :: 3.13
-Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
-Classifier: Topic :: Software Development :: Libraries :: Python Modules
-Classifier: Topic :: Text Processing :: Linguistic
-Classifier: Typing :: Typed
 Requires-Python: >=3.10
 Description-Content-Type: text/markdown
 License-File: LICENSE
 Provides-Extra: dev
 Requires-Dist: pytest>=7.0; extra == "dev"
-Requires-Dist: pytest-cov>=4.0; extra == "dev"
 Requires-Dist: black>=23.0; extra == "dev"
 Requires-Dist: ruff>=0.1.0; extra == "dev"
 Requires-Dist: mypy>=1.0; extra == "dev"
@@ -38,16 +20,6 @@ Provides-Extra: test
 Requires-Dist: pytest>=7.0; extra == "test"
 Requires-Dist: pytest-cov>=4.0; extra == "test"
 Requires-Dist: pytest-xdist>=3.0; extra == "test"
-Provides-Extra: examples
-Requires-Dist: jupyter>=1.0; extra == "examples"
-Requires-Dist: matplotlib>=3.5; extra == "examples"
-Requires-Dist: pandas>=1.5; extra == "examples"
-Requires-Dist: rich>=13.0; extra == "examples"
-Provides-Extra: performance
-Requires-Dist: numpy>=1.24; extra == "performance"
-Requires-Dist: cython>=3.0; extra == "performance"
-Provides-Extra: all
-Requires-Dist: mytecz-omnitoken[dev,examples,performance,test]; extra == "all"
 Dynamic: license-file
 
 # MyTecZ OmniToken 🚀
@@ -72,12 +44,12 @@ MyTecZ OmniToken is a production-ready universal tokenizer framework that provid
 
 ### ✨ Key Features
 
-- **� Multi-Backend Support**: BPE, WordPiece, SentencePiece, and Hybrid tokenizers
-- **� Unified API**: Single interface across all tokenization methods  
+- **🔧 Multi-Backend Support**: BPE, WordPiece, SentencePiece, and Hybrid tokenizers
+- **🎯 Unified API**: Single interface across all tokenization methods  
 - **🌍 Unicode Ready**: Full support for international text, emojis, and complex scripts
 - **🧪 98 Tests Passing**: Comprehensive test suite ensuring reliability
 - **📊 Frequency Analysis**: Built-in token and character frequency tracking
-- **� Highly Configurable**: Extensive customization options
+- **⚙️ Highly Configurable**: Extensive customization options
 - **⚡ Production Optimized**: Efficient training and inference with robust error handling
 
 ### 🛠️ Supported Tokenization Methods
@@ -445,7 +417,7 @@ python -m pytest tests/ -v
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-## � Links
+## 🔗 Links
 
 - **PyPI Package**: [https://pypi.org/project/mytecz-omnitoken/](https://pypi.org/project/mytecz-omnitoken/)
 - **Source Code**: [https://github.com/kalyanakkondapalli/mytecz_omnitoken](https://github.com/kalyanakkondapalli/mytecz_omnitoken)
@@ -454,5 +426,3 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ---
 
 **Universal Tokenization Made Simple** 🚀
- 
- 

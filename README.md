@@ -20,12 +20,12 @@ MyTecZ OmniToken is a production-ready universal tokenizer framework that provid
 
 ### ✨ Key Features
 
-- **� Multi-Backend Support**: BPE, WordPiece, SentencePiece, and Hybrid tokenizers
-- **� Unified API**: Single interface across all tokenization methods  
+- **🔧 Multi-Backend Support**: BPE, WordPiece, SentencePiece, and Hybrid tokenizers
+- **🎯 Unified API**: Single interface across all tokenization methods  
 - **🌍 Unicode Ready**: Full support for international text, emojis, and complex scripts
 - **🧪 98 Tests Passing**: Comprehensive test suite ensuring reliability
 - **📊 Frequency Analysis**: Built-in token and character frequency tracking
-- **� Highly Configurable**: Extensive customization options
+- **⚙️ Highly Configurable**: Extensive customization options
 - **⚡ Production Optimized**: Efficient training and inference with robust error handling
 
 ### 🛠️ Supported Tokenization Methods
@@ -393,7 +393,7 @@ python -m pytest tests/ -v
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-## � Links
+## 🔗 Links
 
 - **PyPI Package**: [https://pypi.org/project/mytecz-omnitoken/](https://pypi.org/project/mytecz-omnitoken/)
 - **Source Code**: [https://github.com/kalyanakkondapalli/mytecz_omnitoken](https://github.com/kalyanakkondapalli/mytecz_omnitoken)
@@ -402,5 +402,3 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ---
 
 **Universal Tokenization Made Simple** 🚀
- 
- 
